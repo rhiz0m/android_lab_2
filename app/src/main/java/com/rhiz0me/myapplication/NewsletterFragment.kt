@@ -6,10 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.TextView
 import androidx.navigation.Navigation
-import com.rhiz0me.myapplication.databinding.FragmentAboutBinding
+import com.google.android.material.snackbar.Snackbar
 import com.rhiz0me.myapplication.databinding.FragmentNewsletterBinding
 
 
@@ -35,9 +33,8 @@ class NewsletterFragment : Fragment() {
 
         val btnHome = binding.btnHome
         val btnEmailNews = binding.btnEmailNews
-        var getMail = binding.enterEmail.text
+        val getMail = binding.enterEmail.text
 
-        emailArr.add(getMail)
 
         //Onclick
 
@@ -45,16 +42,21 @@ class NewsletterFragment : Fragment() {
             Navigation.findNavController(view).navigate(R.id.action_newsletterFragment_to_homeFragment)
         }
 
-        btnEmailNews.setOnClickListener() {
-           for (item in emailArr) {
-
-               binding.showEmail.text = "Your email is: $item"
-
+        fun addEmail() {
+            emailArr.add(getMail)
+            for (item in emailArr) {
+                binding.showEmail.text = "Your entered email is: $item"
             }
         }
 
+        val snackBar = Snackbar.make(binding.viewNewsletter, "Want us to save your email?", Snackbar.LENGTH_LONG).setAction("UNDO", View.OnClickListener {
+            binding.showEmail.text = ""
+        })
+
+            btnEmailNews.setOnClickListener {
+                addEmail()
+                snackBar.show()
+            }
         return view
     }
-
-
 }
