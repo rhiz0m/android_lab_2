@@ -1,4 +1,4 @@
-package com.rhiz0me.myapplication
+package com.rhiz0me.myapplication.view
 
 import android.os.Bundle
 import android.text.Editable
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.google.android.material.snackbar.Snackbar
+import com.rhiz0me.myapplication.R
 import com.rhiz0me.myapplication.databinding.FragmentNewsletterBinding
 
 

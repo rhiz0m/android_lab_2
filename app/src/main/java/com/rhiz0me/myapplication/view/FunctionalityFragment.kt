@@ -1,4 +1,4 @@
-package com.rhiz0me.myapplication
+package com.rhiz0me.myapplication.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,23 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import com.rhiz0me.myapplication.databinding.FragmentAboutBinding
-import com.rhiz0me.myapplication.databinding.FragmentHomeBinding
+import com.rhiz0me.myapplication.R
+import com.rhiz0me.myapplication.databinding.FragmentFunctionalityBinding
 
-class AboutFragment : Fragment() {
 
-    private lateinit var binding : FragmentAboutBinding
+class FunctionalityFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    lateinit var binding: FragmentFunctionalityBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         // Setup viewBinding
-        binding = FragmentAboutBinding.inflate(layoutInflater,  container, false)
+        binding = FragmentFunctionalityBinding.inflate(layoutInflater,  container, false)
         val view = binding.root
 
         //ID's
@@ -32,7 +29,7 @@ class AboutFragment : Fragment() {
         //Onclick
 
         btnHome.setOnClickListener() {
-            Navigation.findNavController(view).navigate(R.id.action_aboutFragment_to_homeFragment)
+            Navigation.findNavController(view).navigate(R.id.action_functionalityFragment_to_homeFragment)
         }
 
         return view

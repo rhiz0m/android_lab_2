@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context=".view.HomeFragment">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
@@ -16,24 +16,35 @@
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Home Page!"
+            android:text="Welcome to the landing page!"
             android:textSize="24sp" />
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Todays date: "
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn_about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="About Page" />
+            android:text="About" />
 
         <Button
             android:id="@+id/btn_functionality"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Functionality Page" />
+            android:text="Functionality" />
         <Button
             android:id="@+id/btn_news"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="News" />
+        <Button
+            android:id="@+id/btn_updateDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Date" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </FrameLayout>
