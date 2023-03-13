@@ -8,6 +8,6 @@ data class Date (
     var time: LocalTime,
         ) {
     override fun toString(): String {
-        return "Todays date: $date, Current time: $time"
+        return "Todays date: $date, Local time: $time"
     }
 }
