@@ -50,7 +50,7 @@ class NewsletterFragment : Fragment() {
             }
         }
 
-        val snackBar = Snackbar.make(binding.viewNewsletter, "Want us to save your email?", Snackbar.LENGTH_LONG).setAction("UNDO", View.OnClickListener {
+            val snackBar = Snackbar.make(binding.viewNewsletter, "Want us to save your email?", Snackbar.LENGTH_LONG).setAction("UNDO", View.OnClickListener {
             binding.showEmail.text = ""
         })
 
